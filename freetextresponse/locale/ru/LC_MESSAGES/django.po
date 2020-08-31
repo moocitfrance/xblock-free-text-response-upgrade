@@ -1,0 +1,201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-21 10:11+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: models.py:41
+msgid "Display Correctness?"
+msgstr "Показать результат проверки?"
+
+#: models.py:43
+msgid ""
+"This is a flag that indicates if the indicator icon should be displayed "
+"after a student enters their response"
+msgstr "Будет ли показываться иконка-индикатор после ввода ответа"
+
+#: models.py:51
+msgid "Display Other Student Responses"
+msgstr "Показать ответы других"
+
+#: models.py:53
+msgid ""
+"This will display other student responses to the student after they submit "
+"their response."
+msgstr "Показать ответы других студентов после отправки ответа"
+
+#: models.py:62
+msgid "System selected answers to give to students"
+msgstr ""
+
+#: models.py:65
+msgid "Display Name"
+msgstr "Отображаемое название"
+
+#: models.py:67
+msgid "This is the title for this question type"
+msgstr "Название для этого вопроса"
+
+#: models.py:73
+msgid "Full-Credit Key Phrases"
+msgstr "Фразы для полного зачета"
+
+#: models.py:75
+msgid ""
+"This is a list of words or phrases, one of which must be present in order "
+"for the student's answer to receive full credit"
+msgstr "Список слов и фраз (в кавычках), одна из которых должна быть в ответе, "
+"чтобы получить максимальный балл"
+
+#: models.py:83
+msgid "Half-Credit Key Phrases"
+msgstr "Фразы для 50%-ного зачета"
+
+#: models.py:85
+msgid ""
+"This is a list of words or phrases, one of which must be present in order "
+"for the student's answer to receive half credit"
+msgstr "Список слов и фраз (в кавычках), одна из которых должна быть в ответе, "
+"чтобы получить половину баллов"
+
+#: models.py:93
+msgid "Maximum Number of Attempts"
+msgstr "Максимальное количество попыток"
+
+#: models.py:95
+msgid ""
+"This is the maximum number of times a student is allowed to attempt the "
+"problem"
+msgstr "Максимальное количество разрешенных студенту попыток"
+
+#: models.py:103
+msgid "Maximum Word Count"
+msgstr "Максимальное число слов"
+
+#: models.py:105
+msgid "This is the maximum number of words allowed for this question"
+msgstr "Максимально разрешенное количество слов в ответе"
+
+#: models.py:113
+msgid "Minimum Word Count"
+msgstr "Минимальное число слов"
+
+#: models.py:115
+msgid "This is the minimum number of words required for this question"
+msgstr "Минимально разрешенное количество слов в ответе"
+
+#: models.py:123
+msgid "Prompt"
+msgstr "Приглашение ввести ответ"
+
+#: models.py:125
+msgid "This is the prompt students will see when asked to enter their response"
+msgstr "Будет показано студенту в поле ввода ответа"
+
+#: models.py:133
+msgid "Submission Received Message"
+msgstr "Подтверждение отправки ответа"
+
+#: models.py:135
+msgid "This is the message students will see upon submitting their response"
+msgstr "Сообщение будет показано студенту после отправки ответа"
+
+#: models.py:142
+msgid "Weight"
+msgstr "Вес"
+
+#: models.py:144
+msgid "This assigns an integer value representing the weight of this problem"
+msgstr "Целое значение, балл за работу"
+
+#: models.py:152
+msgid "Draft Received Message"
+msgstr "Сообщение после сохранения черновика"
+
+#: models.py:154
+msgid "This is the message students will see upon submitting a draft response"
+msgstr "Студенты получат его, когда сохранят ответ, но еще не отправят его"
+
+#: templates/view.html:15
+msgid ""
+"Allow my response to possibly be visible by other learners after submitting "
+"their response"
+msgstr "Показать мой ответ другим студентам после их оценивания"
+
+#: templates/view.html:21 templates/view.html:24
+msgid "Checking..."
+msgstr "Проверка..."
+
+#: templates/view.html:21 templates/view.html:22
+msgid "Submit"
+msgstr "Отправить"
+
+#: templates/view.html:24 templates/view.html:25
+msgid "Save"
+msgstr "Сохранить черновик"
+
+#: templates/view.html:34
+msgid "Hide"
+msgstr "Скрыть"
+
+#: templates/view.html:35
+msgid "Show"
+msgstr "Показать"
+
+#: templates/view.html:36
+msgid "peer responses"
+msgstr "ответы коллег"
+
+#: templates/view.html:38
+msgid "Submissions by others"
+msgstr "Ответы других"
+
+#: templates/view.html:39 templates/view.html:43
+msgid "No responses to show at this time"
+msgstr "На данный момент никто не ответил"
+
+#: views.py:124
+#, python-brace-format
+msgid "{weight} point possible"
+msgid_plural "{weight} points possible"
+msgstr[0] "{weight} очко доступно"
+msgstr[1] "{weight} очков доступно"
+
+#: views.py:137
+#, python-brace-format
+msgid "{score_string}/{weight} point"
+msgid_plural "{score_string}/{weight} points"
+msgstr[0] "{score_string}/{weight} очко"
+msgstr[1] "{score_string}/{weight} очков"
+
+#: views.py:155
+#, python-brace-format
+msgid "You have used {count_attempts} of {max_attempts} submission"
+msgid_plural "You have used {count_attempts} of {max_attempts} submissions"
+msgstr[0] "Использовано {count_attempts} из {max_attempts} попытки"
+msgstr[1] "Использовано {count_attempts} из {max_attempts} попыток"
+
+#: views.py:179
+#, python-brace-format
+msgid "Your response must be between {min} and {max} word."
+msgid_plural "Your response must be between {min} and {max} words."
+msgstr[0] "Ответ должен содержать от {min} до {max} слова."
+msgstr[1] "Ответ должен содержать от {min} до {max} слов."
+
+#: views.py:275
+#, python-brace-format
+msgid "Invalid Word Count. {word_count_message}"
+msgstr "Неверное число слов. {word_count_message}"
