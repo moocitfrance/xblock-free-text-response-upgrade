@@ -15,6 +15,8 @@ from .mixins.i18n import I18nXBlockMixin
 from .models import Credit
 from .models import MAX_RESPONSES
 
+import logging
+log = logging.getLogger(__name__)
 
 #  pylint: disable=no-member
 class FreeTextResponseViewMixin(
@@ -121,12 +123,10 @@ class FreeTextResponseViewMixin(
         elif self.score == 0.0:
             result = "({})".format(
                 self.ungettext(
-                    "{weight} point possible",
-                    "{weight} points possible",
+                    "{0} point possible",
+                    "{0} points possible",
                     self.weight,
-                ).format(
-                    weight=self.weight,
-                )
+                ).format(self.weight)
             )
         else:
             scaled_score = self.score * self.weight
@@ -134,12 +134,12 @@ class FreeTextResponseViewMixin(
             score_string = ('%.15f' % scaled_score).rstrip('0').rstrip('.')
             result = "({})".format(
                 self.ungettext(
-                    "{score_string}/{weight} point",
-                    "{score_string}/{weight} points",
+                    "{0}/{1} point",
+                    "{0}/{1} points",
                     self.weight,
                 ).format(
-                    score_string=score_string,
-                    weight=self.weight,
+                    score_string,
+                    self.weight
                 )
             )
         return result
@@ -152,12 +152,12 @@ class FreeTextResponseViewMixin(
         result = ''
         if self.max_attempts > 0:
             result = self.ungettext(
-                'You have used {count_attempts} of {max_attempts} submission',
-                'You have used {count_attempts} of {max_attempts} submissions',
+                'You have used {0} of {1} submission',
+                'You have used {0} of {1} submissions',
                 self.max_attempts,
             ).format(
-                count_attempts=self.count_attempts,
-                max_attempts=self.max_attempts,
+                self.count_attempts,
+                self.max_attempts
             )
         return result
 
@@ -177,13 +177,13 @@ class FreeTextResponseViewMixin(
         """
         result = self.ungettext(
             "Your response must be "
-            "between {min} and {max} word.",
+            "between {0} and {1} word.",
             "Your response must be "
-            "between {min} and {max} words.",
+            "between {0} and {1} words.",
             self.max_word_count,
         ).format(
-            min=self.min_word_count,
-            max=self.max_word_count,
+            self.min_word_count,
+            self.max_word_count,
         )
         return result
 
