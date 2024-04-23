@@ -24,9 +24,9 @@ class I18nXBlockMixin(XBlock):
         text = self._i18n_service().ugettext(text)
         return text
 
-    def ungettext(self, *args, **kwargs):
+    def ngettext(self, *args, **kwargs):
         """
-        Call ungettext from the XBlock i18n service
+        Call ngettext from the XBlock i18n service
         """
-        text = self._i18n_service().ungettext(*args, **kwargs)
+        text = self._i18n_service().ngettext(*args, **kwargs)
         return text

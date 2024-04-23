@@ -122,7 +122,7 @@ class FreeTextResponseViewMixin(
             result = ''
         elif self.score == 0.0:
             result = "({})".format(
-                self.ungettext(
+                self.ngettext(
                     "{0} point possible",
                     "{0} points possible",
                     self.weight,
@@ -133,7 +133,7 @@ class FreeTextResponseViewMixin(
             # No trailing zero and no scientific notation
             score_string = ('%.15f' % scaled_score).rstrip('0').rstrip('.')
             result = "({})".format(
-                self.ungettext(
+                self.ngettext(
                     "{0}/{1} point",
                     "{0}/{1} points",
                     self.weight,
@@ -151,7 +151,7 @@ class FreeTextResponseViewMixin(
         """
         result = ''
         if self.max_attempts > 0:
-            result = self.ungettext(
+            result = self.ngettext(
                 'You have used {0} of {1} submission',
                 'You have used {0} of {1} submissions',
                 self.max_attempts,
@@ -175,7 +175,7 @@ class FreeTextResponseViewMixin(
         """
         Returns the word count message
         """
-        result = self.ungettext(
+        result = self.ngettext(
             "Your response must be "
             "between {0} and {1} word.",
             "Your response must be "
